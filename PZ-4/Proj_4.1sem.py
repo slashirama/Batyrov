@@ -5,11 +5,15 @@
 A = int(input("Введите число A: "))
 B = int(input("Введите число B: "))
 
-# Посчитать количество чисел между A и B
-count = B - A - 1
-
-# Выведите числа и их количество
-print(f"Числа между {A} и {B} в порядке убывания:")
-for num in range(B - 1, A, - 1):
-    print(num, end=" ")
-print(f"\nОбщее количество номеров: {count}")
+try:
+    if A > B:
+        raise TypeError()
+    # Посчитать количество чисел между A и B
+    count = B - A - 1
+    # Выведите числа и их количество
+    print(f"Числа между {A} и {B} в  порядке убывания:")
+    for num in range(B-1, A, -1):
+        print(num, end=" ")
+    print(f"\nОбщее количество номеров: {count}")
+except TypeError:
+    print("Число В должно быть больше А")
