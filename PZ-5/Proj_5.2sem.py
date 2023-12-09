@@ -1,7 +1,7 @@
 def mean(x, y):
-    arithmetic_mean = (x + y) / 2
-    geometric_mean = (x * y) ** 0.5
-    return arithmetic_mean, geometric_mean
+    AMean = (x + y) / 2
+    GMean = (x * y) ** 0.5
+    return AMean, GMean
 
 try:
     a = float(input("Введите значение a: "))
@@ -11,7 +11,6 @@ try:
 except ValueError:
     print("Ошибка: Введите корректные числовые значения.")
     exit()
-
 
 mean_ab = mean(a, b)
 mean_ac = mean(a, c)
