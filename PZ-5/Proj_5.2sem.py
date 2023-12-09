@@ -3,15 +3,22 @@ def mean(x, y):
     geometric_mean = (x * y) ** 0.5
     return arithmetic_mean, geometric_mean
 
-A = 5
-B = 8
-C = 12
-D = 15
+try:
+    a = float(input("Введите значение a: "))
+    b = float(input("Введите значение b: "))
+    c = float(input("Введите значение c: "))
+    d = float(input("Введите значение d: "))
+except ValueError:
+    print("Ошибка: Введите корректные числовые значения.")
+    exit()
 
-mean_AB = mean(A, B)
-mean_AC = mean(A, C)
-mean_AD = mean(A, D)
 
-print(f"Среднее арифметическое и геометрическое для (A, B): {mean_AB}")
-print(f"Среднее арифметическое и геометрическое для (A, C): {mean_AC}")
-print(f"Среднее арифметическое и геометрическое для (A, D): {mean_AD}")
+mean_ab = mean(a, b)
+mean_ac = mean(a, c)
+mean_ad = mean(a, d)
+
+# Вывод результатов
+print(f"Среднее арифметическое и геометрическое для (a, b): {mean_ab}")
+print(f"Среднее арифметическое и геометрическое для (a, c): {mean_ac}")
+print(f"Среднее арифметическое и геометрическое для (a, d): {mean_ad}")
+
