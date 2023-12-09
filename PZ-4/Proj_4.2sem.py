@@ -1,15 +1,22 @@
 # Дано целое число N (>0). С помощью операций деления нацело и взятия остатка от
 # деления определить, имеются ли в записи числа N нечетные цифры. Если имеются,
 # то вывести TRUE, если нет — вывести FALSE
-N = int(input('Введите целое число N: '))
+def has_odd_digits(n):
+    while n > 0:
+        digit = n % 10
+        if digit % 2 != 0:
+            return True
+        n //= 10
+    return False
 
-while N > 0:
-    digit = N % 10
-    if digit % 2 != 0:
-        print(True)
+try:
+    N = int(input("Введите целое число N: "))
+    if N > 0:
+        result = has_odd_digits(N)
+        print(result)
     else:
-        print(False)
-    N //= 10
-
+        print("Число должно быть больше 0.")
+except ValueError:
+    print("Ошибка: введено некорректное значение.")
 
 
