@@ -3,6 +3,7 @@
 
 power_of_two = []
 for i in range(1, 11):
-    power_of_two.append(2**i)
+    power_of_two.append(2**i)  # Добавление 2 в степени i в список
+
 
 print(power_of_two)
