@@ -12,7 +12,7 @@ student_data = {
 # Нахождение среднего арифметического оценок
 average_grade = sum(student_data['Оценки']) / len(student_data['Оценки'])
 
-print("Информация в виде словаря:")
+print("Информация:")
 for key, value in student_data.items():
     print(f"{key}: {value}")
 
